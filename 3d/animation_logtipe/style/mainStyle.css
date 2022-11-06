@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container .mainBox {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-animation: mainBox 8s infinite linear;
+          animation: mainBox 8s infinite linear;
+}
+
+@-webkit-keyframes mainBox {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes mainBox {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+.container .mainBox .water {
+  position: absolute;
+  bottom: -150%;
+  left: -25%;
+  display: inline-block;
+  width: 150%;
+  height: 200vh;
+  background: #0fff07;
+}
+
+.container .mainBox .logBox {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 120px;
+  -webkit-transform: translateX(-50%) rotate(0deg);
+          transform: translateX(-50%) rotate(0deg);
+  -webkit-animation: logoBox 8s infinite linear;
+          animation: logoBox 8s infinite linear;
+}
+
+.container .mainBox .logBox .textBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  height: 100%;
+  overflow: hidden;
+  -webkit-animation: textBox 8s infinite linear;
+          animation: textBox 8s infinite linear;
+}
+
+@-webkit-keyframes textBox {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 0;
+  }
+  71%, 100% {
+    width: 220px;
+  }
+}
+
+@keyframes textBox {
+  0% {
+    width: 0;
+  }
+  70% {
+    width: 0;
+  }
+  71%, 100% {
+    width: 220px;
+  }
+}
+
+.container .mainBox .logBox .textBox p {
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.container .mainBox .logBox .textBox h1 {
+  position: relative;
+  white-space: nowrap;
+}
+
+.container .mainBox .logBox .textBox h1::before {
+  content: 'Web trick UZB';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container .mainBox .logBox .textBox b {
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 1.3em;
+  color: #0fff07;
+}
+
+@-webkit-keyframes logoBox {
+  0% {
+    top: 0%;
+    -webkit-transform: translateX(-50%) translateY(0) rotate(0deg);
+            transform: translateX(-50%) translateY(0) rotate(0deg);
+    width: auto;
+  }
+  50% {
+    top: 70%;
+    -webkit-transform: translateX(-50%) translateY(0%) rotate(180deg);
+            transform: translateX(-50%) translateY(0%) rotate(180deg);
+    width: auto;
+  }
+  65%, 70% {
+    top: 40%;
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+    width: auto;
+  }
+  71%, 100% {
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+    width: 340px;
+  }
+}
+
+@keyframes logoBox {
+  0% {
+    top: 0%;
+    -webkit-transform: translateX(-50%) translateY(0) rotate(0deg);
+            transform: translateX(-50%) translateY(0) rotate(0deg);
+    width: auto;
+  }
+  50% {
+    top: 70%;
+    -webkit-transform: translateX(-50%) translateY(0%) rotate(180deg);
+            transform: translateX(-50%) translateY(0%) rotate(180deg);
+    width: auto;
+  }
+  65%, 70% {
+    top: 40%;
+    -webkit-transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%) rotate(180deg);
+    width: auto;
+  }
+  71%, 100% {
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(180deg);
+            transform: translateX(-50%) translateY(-50%) rotate(180deg);
+    width: 340px;
+  }
+}
+
+.container .mainBox .logBox img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=mainStyle.css.map */

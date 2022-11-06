@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../movideApi"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../pyrogram"
+		}
+	],
+	"settings": {}
+}

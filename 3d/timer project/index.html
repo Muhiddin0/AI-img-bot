@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer project</title>
+
+    <!-- scss link -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="timerBox">
+            <span class="soat">0</span>
+            <span class="ajratish">:</span>
+            <span class="minut">0</span>
+        </div>
+    </div>
+    <script>
+        window.onload = function() {
+            console.log('test onload')
+            let soat = document.querySelector(".soat")
+            let minut = document.querySelector(".minut")
+
+            fo (let index = 0;true; index) {
+
+                let globalDate = new Date()
+
+                let allDate = {
+                    soat:globalDate.getHours(),
+                    minut:globalDate.getMinutes()
+                }
+                soat.innerHTML = allDate.soat;
+                minut.innerHTML = allDate.minut;
+            }
+        }
+    </script>
+</body>
+</html>

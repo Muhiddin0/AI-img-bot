@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script src="./apiScript.js"></script> -->
+    <script>
+    function clickAPI() {
+        marvel = 'marvel'
+        url =`http://asilmedia.org/index.php?story=${marvel}&do=search&subaction=search`
+
+        fetch(url)
+            .then(res =>res.json())
+            .then(data => console.log(data))
+
+        console.log(url);
+    }
+    </script>
+</head>
+<body>
+        <input type="text" placeholder="enter title" id="query">
+        <button id="btn" onclick="clickAPI()">click</button>
+</body>
+</html>

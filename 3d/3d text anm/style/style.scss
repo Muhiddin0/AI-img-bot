@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #222;
+}
+.text_box
+{
+    width: 400px;
+    height: 100px;
+
+    transform-style: preserve-3d;
+    animation: slider 10s infinite linear;
+    @keyframes slider {
+        0%
+        {
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        100%
+        {
+            transform: perspective(1000px) rotateX(360deg);
+        }
+    }
+    span {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+
+        transform: rotateX(calc(var(--i)* 30deg)) translateZ(80px);
+        b
+        {
+            font-size: 2.5em;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            background: #222;
+        }
+        .blue-clor
+        {
+            color: rgb(50, 207, 255);
+        }
+        .succses-color
+        {
+            color: rgb(44, 255, 55);
+        }
+    }
+}

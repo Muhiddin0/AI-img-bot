@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$mainTime: 8s;
+
+.container
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .mainBox
+    {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        animation: mainBox $mainTime infinite linear;
+        @keyframes mainBox {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            50%, 100%
+            {
+                transform: rotate(180deg);
+            }
+        }
+        .water
+        {
+            position: absolute;
+            bottom: -150%;
+            left: -25%;
+            display: inline-block;
+            width: 150%;
+            height: 200vh;
+            background: #0fff07;
+        }
+        .logBox
+        {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 50%;
+            width: auto; //120px + 220px;
+            height: 120px;
+
+            transform: translateX(-50%) rotate(0deg);
+            animation: logoBox $mainTime infinite linear;
+            .textBox{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 220px;
+                height: 100%;
+                overflow: hidden;
+
+                animation: textBox $mainTime infinite linear;
+                @keyframes textBox {
+                    0%{
+                        width: 0;   
+                    }
+                    70%{
+                        width: 0;
+                    }
+                    71%, 100%{
+                        width: 220px;
+                    }
+                }
+                p{
+                    color: #fff;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 1.2em;
+                    white-space: nowrap;
+                    text-transform: uppercase;
+                }
+                h1 {
+                    position: relative;
+                    white-space: nowrap;
+                    &::before{
+                        content: 'Web trick UZB';
+                        position: absolute;
+                        width: 100%;
+                        height: 50%;
+                        color: #fff;
+                        overflow: hidden;
+                    }
+                }
+                b{
+                    white-space: nowrap;
+                    font-family: monospace;
+                    font-size: 1.3em;
+                    color: #0fff07;
+                }
+            }
+            @keyframes logoBox {
+                0%
+                {
+                    top: 0%;
+                    transform: translateX(-50%) translateY(0) rotate(0deg);
+                    width: auto;
+                }
+                50%
+                {
+                    top: 70%;
+                    transform: translateX(-50%) translateY(0%) rotate(180deg);
+                    width: auto;
+                }
+                65%, 70%
+                {
+                    top: 40%;
+                    transform: translateX(-50%) rotate(180deg);
+                    width: auto;
+                }
+                71%, 100%
+                {
+                    top: 50%;
+                    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+                    width: 120px + 220px;
+                }
+            }
+            img
+            {
+                // display: none;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+            }
+        }
+    }
+}

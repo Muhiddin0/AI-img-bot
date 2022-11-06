@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.portfolio {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    width: 500px;
+    height: 500px;
+    // background: orange;
+    .portfolio-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: aqua;
+        color: #fff;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        cursor: pointer;
+        filter: brightness(0.3) blur(2px);
+        &:hover {
+            transition: 0.5s;
+            filter: brightness(1) blur(0px);
+        }
+        &.big {
+            grid-row: span 3;
+            grid-column: span 3;
+            background: url('../img-s/pexels-stephan-seeber-1054289.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.small {
+            grid-row: span 1;
+            grid-column: span 1;
+            background: url('../img-s/pexels-sanaan-mazhar-3075993.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.tall {
+            grid-row: span 1;
+            grid-column: span 4;
+            background: url('../img-s/pexels-pratik-gupta-2748716.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
